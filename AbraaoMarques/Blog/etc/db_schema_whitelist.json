@@ -1,0 +1,24 @@
+{
+    "abraaomarques_blog": {
+        "column": {
+            "entity_id": true,
+            "title": true,
+            "description": true,
+            "created_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "abraaomarques_blog_new": {
+        "column": {
+            "entity_id": true,
+            "title": true,
+            "description": true,
+            "created_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="abraaomarques_blog" resource="default" engine="innodb" comment="Blog Post Table" onCreate="migrateDataFromAnotherTable(abraaomarques_blog_new)">
+<!--    <table name="abraaomarques_blog_new" resource="default" engine="innodb" comment="Blog Post Table">-->
+        <column xsi:type="smallint" name="entity_id" unsigned="false" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Blog Post Title"/>
+        <column xsi:type="varchar" name="description" nullable="false" length="255" comment="Blog Post Description"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Blog Created At Time"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>
